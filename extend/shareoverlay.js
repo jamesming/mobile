@@ -1,6 +1,23 @@
 (function(){	
 	var newDiv = document.createElement('div')
 	,content = "\
+	<div id='socialWrapper' 	>\
+	<table>\
+		<tr>\
+			<td  class='first-row '  colspan=2>\
+				<textarea id='embedWrapper'></textarea>\
+			</td>\
+		</tr>\
+		<tr  class='second-row ' >\
+			<td  class='facebook_td ' align=center>\
+				<div id='facebookShareBtn'> &nbsp; </div>\
+			</td>\
+			<td   class='twitter_td ' align=center>\
+				<div id='twitterShareBtn'> &nbsp; </div>\
+			</td>\
+		</tr>\
+	</table>\
+	</div>\
 	<style>\
 	.sharethisOverlay{\
 		position: fixed;\
@@ -10,6 +27,7 @@
 		z-index: 999;\
 		display: none;\
 		background: #3F3F3F;\
+		visibility: visible;\
 	}\
 				#socialWrapper{\
 					position: absolute; \
@@ -63,27 +81,12 @@
 																cursor: pointer;\
 															}	\
 	</style>\
-	<div id='socialWrapper' 	>\
-	<table>\
-		<tr>\
-			<td  class='first-row '  colspan=2>\
-				<textarea id='embedWrapper'></textarea>\
-			</td>\
-		</tr>\
-		<tr  class='second-row ' >\
-			<td  class='facebook_td ' align=center>\
-				<div id='facebookShareBtn'> &nbsp; </div>\
-			</td>\
-			<td   class='twitter_td ' align=center>\
-				<div id='twitterShareBtn'> &nbsp; </div>\
-			</td>\
-		</tr>\
-	</table>\
-	</div>";
+	";
+		
 	newDiv.className +=  'sharethisOverlay';
 	newDiv.innerHTML = content;
 	document.body.insertBefore(newDiv, document.body.firstChild);
-
+	
 	core.close_ustream = function(){
 			
 				if( $('#iframe_video').is(':visible') ){
@@ -91,7 +94,7 @@
 				};
 			
 				$('.ustreamOverlay').fadeOut(300);
-				$('#ustreamBtn').attr('src', '/mobile/images/livestream.png');
+				$('#ustreamBtn').attr('src', '/mobile/images/livestream_open.gif');
 				$('.ustreamOverlay').html('');			
 	};
 

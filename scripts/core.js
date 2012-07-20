@@ -63,10 +63,13 @@ var core = function(window, document){
 	 			this.musicIsSetup = false;
 				this.navIsSliding = 0;
 				this.isSlideDown = true;	
-	 			
-	 			this.isThisIphone = navigator.platform.indexOf("iPhone") != -1 
-													|| navigator.platform.indexOf("iPod") != -1
+
+				this.isThisAndroid = navigator.userAgent.toLowerCase().indexOf("android") != -1;	 			
+	 			this.isThisIphone = navigator.platform.toLowerCase().indexOf("iphone") != -1 
+													|| navigator.platform.toLowerCase().indexOf("ipod") != -1
 													|| false
+				this.isThisMobile = (this.isThisAndroid == true || this.isThisIphone == true);
+
 	 			this.shareBtn = {
 	 				 open:{
 		 				 'true' : 'share_open'
@@ -123,13 +126,19 @@ var core = function(window, document){
 					
 					var belt = document.getElementById('belt');
 					belt.innerHTML = icons;
-					if( !renderIcons){
-							var footerWrapper = document.getElementById('footerWrapper');	
-							footerWrapper.style.bottom = '-50px';
+
+					var footerWrapper = document.getElementById('footerWrapper');	
+
+					if (!renderIcons) {
+						footerWrapper.style.bottom = '-50px';
 					};
 					
-					
-			
+					if (this.isThisMobile) {
+						footerWrapper.className = 'norollover';
+					} else {
+						footerWrapper.className = 'rolloverok';
+					}
+
 			}
 			,setHomeScreenImage:function(){
 					var  homeScreens = {
@@ -221,10 +230,8 @@ var core = function(window, document){
 			}
 			,addEvents:function(){
 				
-						var that = this;
-
-						this.renderNavIconsOnce = false;
-						this.attachEvent('footerWrapper-mouseover', document.getElementById('footerWrapper'), 'mouseover', function(){
+						 var that = this
+								,activateNav = function(){
 							
 									that.loadSpinner();
 							
@@ -261,8 +268,15 @@ var core = function(window, document){
 									
 									that.processCallbackQueue();
 							
-						});	
+						};
+
+						this.renderNavIconsOnce = false;
 						
+						if( core.unit == 2 | core.unit == 3){
+							this.attachEvent('footerWrapper-mouseover', document.getElementById('footerWrapper'), 'mouseover', activateNav);	
+						}else{
+							activateNav();
+						};
 						
 						if( document.getElementById('liveStreanLink')){
 							
@@ -295,7 +309,7 @@ var core = function(window, document){
 									
 									that.doWhenJqueryReady(function(){
 											that.loadScript('shareoverlay', '/mobile/extend/' + 'shareoverlay.js', function(){
-												that.displayShareThis();
+												core.displayShareThis();
 											});
 											that.processCallbackQueue();
 									});

@@ -2,6 +2,38 @@
 
   var newDiv = document.createElement('div')  
 	,content = "\
+		<div   style='padding-top:15px'  >\
+						<div   class='shareVideoOverlayRow '  style='top:8%'  ><b><big>SHARE THIS VIDEO</big></b>\
+						</div>\
+						<div   class='shareVideoOverlayRow '   style='top:26%' >\
+							<span  class='tinyItalic ot' >Currently playing:</span><b  id='currently_playing'  class='tt ellipsis' ></b>\
+						</div>\
+						<div    class='shareVideoOverlayRow ' class='shareVideoOverlay_main '    style='top:45%' >\
+							<div  class='oh '      >\
+								<div  class='tt tinyItalic'   style='text-align:right' >Post video to Twitter\
+								</div>\
+								<div  class='ot ' >\
+									<a id='tweet_video_link' target='_blank' >\
+										<img  id='shareVideoOnTwitter'  src='/mobile/images/twitter.png' />\
+									</a>\
+								</div>\
+							</div>\
+							<div class='oh '  >\
+								<div  class='ot ' >\
+									<a id='facebook_video_link' target='_blank' >\
+										<img   id='shareVideoOnFacebook'    src='/mobile/images/facebookBtn.png' />\
+									</a>\
+								</div>\
+								<div  class='tt tinyItalic'  style='text-align:left'>Post Video to Facebook\
+								</div>\
+							</div>\
+						</div>\
+						<div  class='shareVideoOverlayRow '    style='top:70%' >\
+							<div  >\
+								<img  id='cancel_video_share'  src='/mobile/images/cancel.png?v=2' />\
+							</div>\
+						</div>\
+		</div>\
 	<style>\
 .shareVideoOverlay{\
 		position: fixed;\
@@ -37,38 +69,6 @@
 					width:80%;	\
 			}\
 	</style>\
-		<div   style='padding-top:15px'  >\
-						<div   class='shareVideoOverlayRow '  style='top:8%'  ><b><big>SHARE THIS VIDEO</big></b>\
-						</div>\
-						<div   class='shareVideoOverlayRow '   style='top:26%' >\
-							<span  class='tinyItalic ot' >Currently playing:</span><b  id='currently_playing'  class='tt ellipsis' ></b>\
-						</div>\
-						<div    class='shareVideoOverlayRow ' class='shareVideoOverlay_main '    style='top:45%' >\
-							<div  class='oh '      >\
-								<div  class='tt tinyItalic'   style='text-align:right' >Post video to Twitter\
-								</div>\
-								<div  class='ot ' >\
-									<a id='tweet_video_link' target='_blank' >\
-										<img  id='shareVideoOnTwitter'  src='/mobile/images/twitter.png' />\
-									</a>\
-								</div>\
-							</div>\
-							<div class='oh '  >\
-								<div  class='ot ' >\
-									<a id='facebook_video_link' target='_blank' >\
-										<img   id='shareVideoOnFacebook'    src='/mobile/images/facebookBtn.png' />\
-									</a>\
-								</div>\
-								<div  class='tt tinyItalic'  style='text-align:left'>Post Video to Facebook\
-								</div>\
-							</div>\
-						</div>\
-						<div  class='shareVideoOverlayRow '    style='top:70%' >\
-							<div  >\
-								<img  id='cancel_video_share'  src='/mobile/images/cancel.png?v=2' />\
-							</div>\
-						</div>\
-		</div>\
 	";
 	newDiv.className +=  'shareVideoOverlay';
 	newDiv.innerHTML = content;
@@ -77,7 +77,7 @@
 
 
 	if( !core.events['.share_video']){
-			core.events['.share_video'] = true;
+			core.events['.share_video'] = true;console.log('binding sharevideo');
 			$('.share_video').live('click', function(event) {
 				
 					$('.shareVideoOverlay').toggle();

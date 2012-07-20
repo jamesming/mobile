@@ -58,7 +58,11 @@ core.showmusicdetails=function(){
 			
 												
 											})
-											.attr('href', $('#amazon_link').attr('href')+ASIN);	
+											
+											
+											// .attr('href', $('#amazon_link').attr('href')+ASIN);	
+											
+											.attr('href', albumurl);	
 						
 
 								};

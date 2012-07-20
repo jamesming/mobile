@@ -21,7 +21,10 @@
 }
 #headerWrapper{
 	padding:0px;
-}	
+}
+.ustreamOverlay {
+	top: 60px;
+}
 .sharethisOverlay{
-top: 60px;
+	top: 60px;
 }

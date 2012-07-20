@@ -1,4 +1,15 @@
 (function(){
+	
+				core.ie = (function () {
+				    var undef, v = 3, div = document.createElement('div');
+				
+				    while (
+				        div.innerHTML = '<!--[if gt IE '+(++v)+']><i></i><![endif]-->',
+				        div.getElementsByTagName('i')[0]
+				    );
+				
+				    return v > 4 ? v : undef;
+				}());
 
 				var  navL = document.getElementById('scrollLeftImg');
 				var  navR = document.getElementById('scrollRightImg');
@@ -162,14 +173,28 @@
 				});		
 				
 				
-
+				core.ie8Hack = function(){
+					
+					if (core.ie === 8) {
+							// nav icon and text disappears
+							$('.navTextLink, .navIconLink').each(function(event) {
+										$(this).html($(this).html())
+							});	
+							
+					}
+					
+				}
 
 				core.scrollLeft = function(){
 							
 						if(core.navRightCount == 0) return;
 						else core.navRightCount--;
 				
-						$(".belt").animate({left: "+=" + core.style[core.unit].nav_icon_size}, 100);	
+						$(".belt").animate({left: "+=" + core.style[core.unit].nav_icon_size}, 100, function(){
+							core.ie8Hack();
+						});	
+						
+						
 								
 				};
 				
@@ -184,7 +209,9 @@
 						
 						core.navRightCount++;
 				
-						$(".belt").animate({left: "-=" + core.style[core.unit].nav_icon_size}, 100);	
+						$(".belt").animate({left: "-=" + core.style[core.unit].nav_icon_size}, function(){
+							core.ie8Hack();
+						});	
 										
 				};
 

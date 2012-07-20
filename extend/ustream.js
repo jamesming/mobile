@@ -21,8 +21,7 @@ core.displayUstream=function(){
 							
 							
 							if( core.unit == 3 ){
-								$('.ustreamOverlay').css({top:'65px'})
-								.children('iframe').height(185);
+								$('.ustreamOverlay').children('iframe').height(190);
 							};							
 						}
 						else { 

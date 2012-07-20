@@ -75,6 +75,14 @@
 			};
 			
 			core.get_moments_past=function(created){
+				
+				
+						if (!Date.now) {  
+							Date.now = function() {  
+								return +(new Date);  
+							};  
+						}  
+				
 						var right_now_in_miliseconds = Date.now();
 						created = new Date(created);
 						created_in_miliseconds = created.getTime();

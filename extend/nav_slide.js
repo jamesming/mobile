@@ -15,7 +15,7 @@ core.nav_slide =  {
 														  }, 500, function(){
 														  	
 														  	core.navIsSliding = 0;
-														  	$('#footerWrapper').css({bottom:'0px'});
+														  	$('#footerWrapper').css({bottom:'0px'}).toggleClass('expanded');
 														});		
 												
 												};
@@ -40,7 +40,7 @@ core.nav_slide =  {
 																  }, 500, function(){
 																  	
 																  	core.navIsSliding = 0;
-																  	$('#footerWrapper').css({bottom:'-50px'});
+																  	$('#footerWrapper').css({bottom:'-50px'}).toggleClass('expanded');
 																  	$('.jspVerticalBar').css({visibility:'visible'})
 																  	
 																});														

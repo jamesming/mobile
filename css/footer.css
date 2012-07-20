@@ -1,0 +1,115 @@
+.navItemHolder
+{
+	background: transparent; 
+	color: #000000; 
+	text-shadow: 0 0 0; 
+	text-transform: uppercase; 
+	font-family: arial;
+	text-decoration: none;
+	padding-top:4px;
+	height: 21px;
+}
+
+.navItemHolder a
+{
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+
+.navItemHolder a:hover
+{
+	color: #FFFFFF;
+	text-shadow: 0 0 10px #FFFFFF; 
+}
+
+.navSelected a
+{
+	color: #FFFFFF;
+	text-shadow: 0 0 10px #FFFFFF; 
+}
+
+.elementsOverlay
+{
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background: #CCCCCC;
+	z-index: 999;
+	height: 100%;
+	display: none;
+	background: url('../images/overlayBG.png'); 
+}
+
+.elementsWrapper
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	background: #101010;
+	border: 1px solid #333333;
+	padding-bottom:40px; 
+}
+
+.elementsInnerWrapper
+{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.overlayNavItem
+{
+	float: left; 
+	background: #424242; 
+	margin: 10px 0px 0px 10px;
+	padding: 10px 0px 0px 0px;
+	text-align: center;
+}
+
+.normalIcon
+{
+	margin-top: 0px; 
+	background: url('/mobile/images/footerBG.gif') repeat-x #000000; 
+	height: 48px;
+	padding-top: 6px;
+}
+
+.highlightedIcon
+{
+	margin-top: 0px;  
+	background: url('/mobile/images/selected_image.png') repeat-x #000000; 
+	height: 48px;
+	padding-top: 0px;
+	margin-top: -2px;
+}
+
+/* step carousel */
+
+.stepcarousel
+{
+	
+	position: relative; /*leave this value alone*/
+	overflow: scroll; /*leave this value alone*/
+	width: 248px; /*Width of Carousel Viewer itself*/
+	height: 72px; /*Height should enough to fit largest content's height*/
+}
+
+.stepcarousel .belt
+{
+	
+	position: absolute; /*leave this value alone*/
+	left: 0;
+	top: 0;
+}
+
+.stepcarousel .iconbox
+{
+	float: left; /*leave this value alone*/
+	overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+	width: 86px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+	background: #CCCCCC;
+	height: 72px;
+}

@@ -24,7 +24,7 @@
 		z-index: 999;
 		height: 1px;
 		display: none;
-		background: url('../images/overlayBG.png'); 
+		background: url('../images/overlayBG.gif'); 
 	}
 	.subHeader
 	{
@@ -200,5 +200,5 @@
 .addFontSize19 { font-size: 19px; }
 .addFontSize20 { font-size: 20px; }
 
-#insertZipImage{ background: url('../images/theaters-cta.gif'); height: 75px; background-position: center; background-repeat: no-repeat; background-color:#131313;}
-#zipImage{height: 75px; background-color:#131313; text-align: center;}
+#insertZipImage{ background: url('../images/theaters-cta.gif'); height: 75px; background-position: center; background-repeat: no-repeat; background-color: #131313; }
+#zipImage {height: 75px; background-color:#131313; text-align: center;}

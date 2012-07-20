@@ -129,7 +129,7 @@
 	{
 		position: fixed;
 		width: 100%;
-		top: 90px;
+		top: 85px;
 		left: 0px;
 		bottom: 0px;
 		z-index: 9999;
@@ -183,15 +183,15 @@ cursor:pointer;
 	font-weight: bold;
 }
 
-.navItemHolder a:hover
+#footerWrapper.rolloverok .navItemHolder a:hover
 {
-	color: #FFFFFF;
+	color: #FFF;
 	text-shadow: 0 0 10px #FFFFFF; 
 }
 
 .navSelected a
 {
-	color: #FFFFFF;
+	color: #FFF;
 	text-shadow: 0 0 10px #FFFFFF; 
 }
 
@@ -313,7 +313,7 @@ cursor:pointer;
     clear:both;
 }
 
-.beltContainerElement{
+#belt_container{
 	background: url('/mobile/images/outerFooterBG.gif');
 }
 
