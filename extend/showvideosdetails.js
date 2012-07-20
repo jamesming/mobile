@@ -77,7 +77,7 @@
 
 
 	if( !core.events['.share_video']){
-			core.events['.share_video'] = true;console.log('binding sharevideo');
+			core.events['.share_video'] = true;
 			$('.share_video').live('click', function(event) {
 				
 					$('.shareVideoOverlay').toggle();
