@@ -1,0 +1,303 @@
+	.connectPostBtn
+	{
+		margin: 6px 8px 0px 0px;
+		height: 23px;
+		width: 72px;
+	}
+
+	.postContainer
+	{
+		margin-top: 0px; 
+		text-shadow: 0 0 0; 
+		background: #454545;
+		width: 100%;
+	}
+
+	.postInnerContainer
+	{
+		/* width: 320px; */
+		width: 290px;
+		margin: 0px auto;
+		padding-bottom: 5px;
+		display: none;
+	}
+
+	.statusInput
+	{
+		height: 93px; 
+		width: 205px;
+		margin: 10px 10px 10px 15px;
+		float: left;
+	}
+
+	.tweetTextArea
+	{
+		background: #212121;
+		text-shadow: 0 0 0;
+		border: 0px;
+		padding: 5px;
+		font-size: 10px;
+		max-width: 205px; 
+		max-height: 92px;
+		min-width: 205px; 
+		min-height: 92px;
+		overflow-y: auto;
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+
+	#innerConnectContainer
+	{
+		background: #131313; 
+		color: #CCCCCC;
+		text-align: left;
+	}
+
+	.connectpostInstruction
+	{
+		/* width: 85px; */
+		width: 60px;
+		color: #8D8D8D;
+		float: left;
+		font-size: 9px;
+		font-weight: bold;
+	}
+
+	#charCount
+	{
+		color: red;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.menuContainer
+	{
+		background: url('../images/images-connect/menuBG.gif') repeat-x; 
+		height: 34px; 
+		border-bottom: 1px solid #2F2F2F;
+	}
+
+	.menuItemContainer a, .menuItemContainerActive a
+	{
+		display: inline;
+		color: #FFFFFF;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 12px;
+		font-family: arial;
+		position: absolute;
+		width:100%;
+		white-space:nowrap;
+	}
+
+	.menuItemContainer
+	{
+		background: url("../images/images-connect/menu.gif");
+		width: 106px;
+		height: 34px;
+		float: left;
+	}
+
+	.menuInnerContainer
+	{
+		margin: 0px auto; 
+		width: 320px;
+	}
+
+	.menuItemContainer.active
+	{
+		background: url("../images/images-connect/menuActive.gif");
+		width: 106px;
+		height: 34px;
+		float: left;
+	}
+
+	.feedContainer
+	{
+		width: 100%;
+	}
+
+	.feedItemContainer
+	{
+		border-bottom: 1px solid #000000;
+		font-size: 11px;
+	}
+
+	.avatarContainer
+	{
+		height: 90px;
+		float: left;
+	}
+
+	.outerAvatarContainer
+	{
+		width: 56px; 
+		height: 56px; 
+		background: #000000; 
+		margin: 10px 10px 10px 10px;
+	}
+
+	.innerAvatarContainer
+	{
+		width: 48px; 
+		height: 48px; 
+		margin-left: 4px; 
+		margin-top: 4px; 
+	}
+
+	.durationContainer
+	{
+		color: #51C4FF; 
+		width: 72px; 
+		margin-left: -7px; 
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.authorContainer
+	{
+		margin-top: 2px; 
+		color: #505050; 
+		text-shadow: 0 0 0;
+	}
+
+	.itemBorder
+	{
+		height: 1px; 
+		background: #2F2F2F;
+	}
+
+	.facebookItemHeader
+	{
+		background: #3B5998;
+		margin: 5px 5px 0px 5px;
+	}
+
+	.facebookItemContainer
+	{
+		border-bottom: 1px solid #CCCCCC;
+		background: #FFFFFF;
+		margin: 0px 5px;
+		color: #808080;
+	}
+
+	.facebookItemContainer:first-child
+	{
+		border-top: 1px solid #CCCCCC;
+	}
+
+	.facebookItemContainer:last-child
+	{
+		margin-bottom: 5px;
+	}
+
+	.facebookItemContainer a
+	{
+		color: #3B5998;
+		font-size: 12px;
+	}
+
+	.facebookItemTimeStamp
+	{
+		color: #808080;
+	}
+
+	.checkBoxFlag
+	{
+		color: #FFFFFF; 
+		width: 10px; 
+		height: 12px; 
+		background: url('../images/images-connect/radioBtn.png') repeat-x; 
+		padding: 2px 5px 4px 5px;
+		float: left;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+		cursor: pointer;
+	}
+
+	.checkBoxLabel
+	{
+		width: 45px; 
+		margin-left: 0px;
+		float: left;
+		font-size: 8px;
+		text-align: left;	
+		color: #CCC;
+	}
+	
+	.checkBoxLabel a
+	{
+		color: #CCC;
+	}
+	
+	.checkBoxLabel a:hover
+	{
+		color: #FFF;
+	}
+
+	.twitterContent
+	{
+		font-weight: bold;
+	}
+	
+	.twitterContent a
+	{
+		/* color: #51C4FF; */
+		color: #FFF;
+		text-decoration: none;
+		/* font-weight: bold; */
+	}
+
+	.twitterContentTimeStamp
+	{
+		color: #CCCCCC;
+	}
+
+	.headerFacebook
+	{
+		font-weight: bold;
+	}
+
+	.headerFacebook a
+	{
+		color: #3B5998;
+		text-decoration: none;
+	}
+
+	.headerFacebook a:visited
+	{
+		color: #3B5998;
+		text-decoration: none;
+	}
+
+	.facebookContent a
+	{
+		color: #3B5998;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.facebookContent a:visited
+	{
+		color: #3B5998;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.facebookContent img
+	{
+		width: 100px;
+		margin-bottom: 3px;
+	}
+
+	.btnPostWrapper
+	{
+		float: right;
+		display: none;
+	}
+
+	.btnConnectWrapper
+	{
+		float: right; 
+	}

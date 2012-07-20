@@ -1,0 +1,27 @@
+.insideWrapper{
+	width:300px;
+}
+.elementsWrapper{
+	margin-top:10px;
+	height:190px;
+}
+.elementsInnerWrapper{
+	padding:0px 2px;	
+}
+.headerBtns{
+	width:77px;
+	height:60px;
+}
+.headerBtnUstream{
+	margin:5px 5px -3px;
+		
+}
+.headerBtnShare{
+	margin: 5px;
+}
+#headerWrapper{
+	padding:0px;
+}	
+.sharethisOverlay{
+top: 60px;
+}

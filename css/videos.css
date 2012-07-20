@@ -1,0 +1,247 @@
+	.innerContentVideosListContainer
+	{
+		/*background: #232323; */
+		color: #7C7C7C; 
+		font-size: 11px;
+		text-align: left;
+	}
+
+.videoInnerItemHolder{
+	height:55px;
+	clear:both;
+	margin-top:8px;
+	white-space nowrap;
+	border-bottom: 1px solid #000000;
+}
+		.video_item_left{
+			height:55px;
+			width:90%;
+			float: left;
+			white-space nowrap;
+		}
+					.videoThumbWrapper{
+						float: left;
+						margin-top: 6px; 
+						width:95px;
+					}	
+		
+							.videoThumb{
+								margin-left: 10px;
+							}			
+							
+		
+									.videoThumb img{
+										width:71px;
+										height:43px;
+										border:0px solid gray;
+									}	
+					.videoLabelWrapper{
+						float: left;	
+						margin-top: 6px; 
+						cursor: pointer;
+						padding-left:5px;
+						box-sizing:border-box; 
+					}													
+
+						.videoLabel{
+							font-size: 13px;
+							white-space: nowrap;
+							overflow: hidden; 
+							font-weight: bold;
+							color: #A3A3A3;
+							text-align:left;
+						}
+					
+						.albumInfo{
+							color: #7C7C7C;
+							white-space: nowrap; 
+							overflow: hidden; 
+							padding-bottom: 5px;
+							text-align:left;		
+						}
+
+
+.video_item_right{
+	width:10%;
+	float: left;
+}
+
+		.video_item_right .playHolder{
+				float: right;
+		}
+		
+		
+.videoItemDivider
+{
+	height: 1px; 
+	background: #2F2F2F;
+}
+
+#vidContainer
+{
+	display: none;
+}
+
+.shareContainer
+{
+	display: none;
+}
+
+
+	.innerVideoPageContainer
+	{
+		width: 320px; 
+		margin-left: auto; 
+		margin-right: auto;
+	}
+
+	.videoCountWrapper
+	{
+		width: 44px; 
+		height: 20px; 
+		background: url('/mobile/images/images-photos/countContainer.png') center no-repeat;
+		margin-top: 2px;
+		float: left;
+		font-size: 11px;
+	}
+
+	.innerVideoCountWrapper
+	{
+		margin-top: 3px; 
+		color: #FFFFFF;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.videoCategoryBtnWrapper
+	{
+		margin-top: 3px; 
+		margin-left: 5px;
+		float: left;
+		cursor: pointer;
+	}
+
+
+	.videoCameraIcon
+	{
+		float: left;
+		margin-left: 30px;
+	}
+
+	.innerVideoPageContainer
+	{
+		width: 320px; 
+		margin-left: auto; 
+		margin-right: auto;
+	}
+
+	.videosDesc
+	{
+		float: right;
+		color: #FFFFFF; 
+		font-size: 10px; 
+		font-weight: bold; 
+		margin-top: 5px; 
+		margin-right: 3px;
+		text-align: right;
+	}
+
+	.closeVideo
+	{
+		float: left;
+		color: #FFFFFF; 
+		font-size: 10px; 
+		display: none;
+		margin-left: 3px;
+		cursor: pointer;
+	}
+
+	.shareVideoBtn
+	{
+		float: right;
+		visibility: hidden;
+		cursor: pointer;
+		margin-top: 7px;
+		margin-right: 5px;
+	}
+
+	/* video share */
+
+	.shareLabelWrapper
+	{
+		height: 18px; 
+		width: 148px; 
+		margin-left: auto; 
+		margin-right: auto; 
+		margin-top: 15px;
+	}
+
+	.currentPlayWrapper
+	{
+		font-style: italic; 
+		color: #808080; 
+		font-size: 10px; 
+		font-weight: bold;
+	}
+
+	#currentPlayTitleWrapper
+	{
+		font-size: 11px; 
+		font-weight: bold; 
+		color: #CCCCCC;
+	}
+
+	.shareBtnWrappers
+	{
+		margin-top: 20px;
+	}
+
+	.embedCodeWrapper
+	{
+		padding: 10px; 
+		margin-top: 15px; 
+		background: #000000;
+		overflow-y: hidden; 
+		overflow-x: hidden; 
+		margin-left: 35px; 
+		margin-right: 35px; 
+		color: #fff; 
+		text-align: left; 
+		font-size: 11px;
+	}
+
+	.embedBtnWrapper
+	{
+		width: 69px; 
+		margin-right: auto; 
+		margin-left: auto; 
+		margin-top: 12px; 
+		margin-bottom: 20px;
+	}
+
+	.twitterDesc
+	{
+		text-align: right; 
+		font-size: 10px; 
+		font-style: italic; 
+		color: #808080; 
+		margin-top: 5px; 
+		font-weight: bold;
+	}
+
+	.facebookDesc
+	{
+		text-align: left; 
+		font-size: 10px; 
+		font-style: italic; 
+		color: #808080; 
+		margin-top: 5px; 
+		font-weight: bold;
+	}
+
+	.vidCurrentLabel
+	{
+		text-align: center;
+		padding: 0px 10px;
+	}
+	

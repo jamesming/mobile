@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta name = "viewport" content = "width = 320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />	
+	<title  id="theTitle" ></title>
+	<script>
+		var  url_get = function(name) {
+						name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+						var regexS = "[\\?&]"+name+"=([^&#]*)";
+						var regex = new RegExp( regexS );
+						var results = regex.exec( window.location.href );
+						if( results == null )
+						return "";
+						else
+						return results[1];			
+						}
+				,_gaq = _gaq || []
+				,gid 
+				,cache_buster = url_get("cache_buster");
+				
+				
+
+	</script>
+	<script>document.write('<link rel="stylesheet" type="text/css" href="/mobile/css/global.css?cache_buster='   + cache_buster +  '" />')</script>
+	<script>document.write('<link rel="stylesheet" type="text/css" href="/mobile/css/unit' + url_get( 'unit' ) + '.css?cache_buster='  + cache_buster +  '" />')</script>
+	<script>document.write('<script type="text/javascript" language="javascript" src="/mobile/scripts/core.js?cache_buster='   + cache_buster +  '"><\/script>')</script>
+</head> 
+<body > 
+	<div  id="main_container"      >
+		<div id="headerWrapper"    >
+			<div   id="top_area" style="float:left;">
+					<div  id="rightTwoThirdsOfTopSection"   style=" background:blue;clear:both;" >
+							<span class="headerBtns"      >
+								<div class="headerBtnUstream">
+									<a  id="liveStreanLink">
+										<img id="ustreamBtn" src="/mobile/images/livestream_open.gif" />
+									</a>
+								</div>								
+								<div class="headerBtnShare">
+									<a  id="shareThisLink"  >
+										<img  id="share_button" src="/mobile/images/btnShare.gif" />
+									</a>
+								</div>
+							</span>					
+							<span  id="logo_section_span"   style="float:right;"  >
+								<div id="logo_section"   style="float:left"  >
+								</div>
+							</span>
+					</div>
+	 				<div  id="twitter_feed_scroller"   style="clear:both;display:none"  >
+						<div class="scrollDisplay"> 
+								<marquee behavior="scroll" scrollamount="1.5"></marquee>
+						</div>
+					</div>						
+			</div>
+		</div>
+		<div id="contentWrapper"  class="mainContentWrapper" style="overflow:hidden;background:#232323"  >
+				<div  id="panels_container" style="width:1800px">
+							<div  id="panel-1"     class="panels "    style="float:left"   >
+								<div id="homePageContainer">
+									<div>		
+										<img  id="home_img"    style="cursor:pointer"  />
+									</div>
+								</div>
+							</div>
+							<div  id="panel-2"     class="panels "    style="float:left;"  >
+							</div>	
+							<div  id="panel-3"     class="panels "     style="float:left;" >
+							</div>
+				</div>
+		</div>
+		<div id="footerWrapper">
+				<div style="height: 72px;">
+						<div  id="belt_container"    >
+											<div  id="left_controls" class="addFloatLeft" style="height: 72px;">
+												<div  class="left_controlsInnerDivs "  style="height: 20px;">
+													<a  class="navOverlayLink start"  >
+														<img class="overlayBtn" src="/mobile/images/aboveNav.gif" style="margin: 6px 2px 0;" />
+													</a>
+												</div>
+												<div  class="left_controlsInnerDivs " style="margin-top: 5px; width: 35px;cursor:pointer">
+														<a  id="scrollLeft"> 
+															<img id="scrollLeftImg"  ></img>
+														</a>
+												</div>
+											</div>
+											<div id="mygallery" class="stepcarousel addFloatLeft" style="overflow: hidden; margin-left: -2px;">
+												<div id="belt" class="belt" style="right: -100px;"></div>
+											</div>
+											<div  id="right_controls"  class="addFloatLeft" style="height: 72px;">
+												<div  class="right_controlsInnerDivs "  style="height: 20px;">
+													<a   class="navOverlayLink " >
+														<img class="overlayBtn" src="/mobile/images/aboveNav.gif" style="margin: 6px 2px 0;cursor:pointer" />
+													</a>
+												</div>
+												<div  class="right_controlsInnerDivs "  style="margin-top: 5px; width: 35px;  ">
+														<a   id="scrollRight" > 
+															<img id="scrollRightImg" ></img>
+														</a>
+												</div>
+											</div>								
+							<div  style="clear: both;" ></div>
+						</div>
+				</div>										
+		</div>
+	</div>
+</body>
+<div class="ustreamOverlay"></div>	
+<div  id="spinner" ></div>
+</html>

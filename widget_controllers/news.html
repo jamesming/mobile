@@ -1,0 +1,31 @@
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> NEWS </div>
+</div>
+
+<div class="newsContainer "     >
+	<div id='newsWrapper' style='display: block;color:white; background: #131313; overflow-y:auto;overflow-x:hidden'  class=' slideUpDown' >
+		test
+ 	</div>
+</div>
+
+<script type="text/javascript">
+	
+	//console.log(' ============ widget_controller news.html ============');	
+	
+	
+
+	
+	core.loadScript('shownews', '/mobile/extend/shownews.js', function(){
+
+		core.shownews();
+
+	})								
+	
+	core.processCallbackQueue();			
+</script>
+

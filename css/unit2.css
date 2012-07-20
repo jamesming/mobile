@@ -1,0 +1,23 @@
+.insideWrapper{
+	width:400px;
+}
+
+.elementsWrapper{
+	height:210px;
+}
+.elementsInnerWrapper{
+padding:0px 40px;	
+}
+#avatar{
+	margin-right:5px;
+}
+#headerWrapper{
+	padding:5px;
+	width:390px;
+}
+.headerBtns{
+	width:92px;	
+}
+.sharethisOverlay{
+top: 82px;
+}

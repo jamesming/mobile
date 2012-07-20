@@ -1,0 +1,55 @@
+	<div class="subHeader"   >
+		<div class="btnHome addFloatLeft">
+			<a class='scrollTo_panel-2' >
+				<img  src='/mobile/images/btnBack.png' />
+			</a>
+		</div>
+		<div class="subHeaderTitle" style="padding-left: 0px;"> 
+			PHOTOS
+		</div>
+			<div class="btnNext">
+				<a  class='navLink next_a_link '  controller="photosDetails" targetIs="panel-3">
+				<img class='btnPhotosNext' src="/mobile/images/btnNext.png" />
+				</a>	
+			</div>
+			<div class="btnPrev">
+				<a  class='navLink prev_a_link ' controller="photosDetails" targetIs="panel-3">
+				<img class='btnPhotosPrev' src="/mobile/images/btnPrev.png" />
+				</a>		
+			</div>
+	</div>
+	<style>
+		.imageWrapper{
+			position:relative;
+		}
+				.imageWrapper .overlay_image_detail{
+					position:absolute;
+					padding-top:10px;
+					height:20px;
+					top:0px;
+					left:0px;	
+					right:0px;					
+					background-color: rgba(0, 0, 0, 0.50);
+					z-index:999;
+					color:white;
+					font-size:9px;
+					font-style:italic;
+					display:none;
+				}
+	</style>
+	<div  id='inside_content'   style='overflow:auto;clear:both'  >
+		<div    class='imageWrapper insideWrapper scroll-pane-arrows '  >
+			<div  class='overlay_image_detail' >
+			</div>
+			<img   style='position:relative;'   id='image_detail' onError="$(this).attr('src', '/mobile/images/images-photos/imageNotFoundLarge.png');"/>
+		</div>
+	</div>
+<script type="text/javascript" language="Javascript">
+	core.loadScript('showphotoDetail', '/mobile/extend/showphotoDetail.js', function(){
+		core.showphotodetail();
+		core.fixphotodetail();
+	})								
+	core.processCallbackQueue();
+
+</script>
+

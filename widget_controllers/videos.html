@@ -1,0 +1,23 @@
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> VIDEOS </div>
+	<div class="addClearBoth"></div>
+</div>
+
+<div id='vidListContainer' class="innerContentVideosListContainer slideUpDown  scroll-pane-arrows insideWrapper"      ></div>
+
+<script type="text/javascript">
+
+//console.log(' ============ widget_controller videos.html ============');
+
+core.loadScript('showvideos', '/mobile/extend/showvideos.js', function(){
+	core.showvideos();
+})								
+
+core.processCallbackQueue();
+
+</script>

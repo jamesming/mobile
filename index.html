@@ -1,0 +1,152 @@
+<!--  http://republicprojectclients.com/RPP/mobile/home/104#/RPP/mobile/theaters/104-->
+<!DOCTYPE html>
+<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		<meta name = "viewport" content = "width = 320">	
+<style>
+	.container{
+	width:920px;	
+	}
+	.float_left{
+		float:left !important;	
+	}
+	.clearfix(
+		clear:both;
+	)
+	.orange{
+	background:orange;	
+	}
+	.lightblue{
+	background:lightblue	
+	}
+	.mobile iframe{
+	width:320px;
+	height:480px;
+	}	
+	.webplayer iframe{
+	width:400px;
+	height:350px;
+	}	
+
+	.interactive_ad_unit iframe{
+	width:300px;
+	height:250px;
+	}
+	.mini-site iframe{
+	width:600px;
+	height:500px;
+	}	
+	
+	table#main{
+		width:100%;
+		border-bottom:1px solid gray;
+		border-left:1px solid gray;
+		padding:0px 0px 0px 0px;
+		border-collapse: collapse;
+	}
+	table#main td{
+		text-align:center;
+		font-size:24px;
+		border-top:1px solid gray;
+		border-right:1px solid gray;	
+		padding: 0;		
+	}
+	table#main td.half{
+		width:50%;
+	}
+	table#main iframe{
+		margin:30px auto;
+	}
+	
+</style>
+	<script type="text/javascript" language='javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	
+	<script type="text/javascript" language="Javascript">
+			
+	function js_GET( name ){
+	/* 
+	*
+	*  Mimicks a $_GET 
+	*  http://www.netlobo.com/url_query_string_javascript.html
+	*
+	*/	
+
+	  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	  var regexS = "[\\?&]"+name+"=([^&#]*)";
+	  var regex = new RegExp( regexS );
+	  var results = regex.exec( window.location.href );
+	  if( results == null )
+	    return "";
+	  else
+	    return results[1];
+	}
+	
+	$(document).ready(function() {
+		
+		window.userId = js_GET( 'id' );
+		
+		
+$('.interactive_ad_unit iframe').attr('src', '/mobile/app.html?id='+ window.userId + '&unit=3&cache_buster='+Math.floor(Math.random()*999999999))
+//$('.webplayer iframe').attr('src', '/mobile/app.html?id='+ window.userId + '&unit=2&cache_buster='+Math.floor(Math.random()*999999999))
+//$('.mini-site iframe').attr('src', '/mobile/app.html?id='+ window.userId + '&unit=4&cache_buster='+Math.floor(Math.random()*999999999))
+//$('.mobile iframe').attr('src', '/mobile/app.html?id='+ window.userId + '&unit=1&cache_buster='+Math.floor(Math.random()*999999999))
+	
+		$('.container').css({
+			'margin-left':($(window).width() / 2) - $('.container').width()/2,
+			'margin-right':($(window).width() / 2) - $('.container').width()/2
+		})
+	});
+	</script>
+</head>
+<body>
+	<div  class='container ' >
+			<table  id='main' >
+																							
+				<tr>
+					<td  class='half ' >Interactive Ad Unit (Unit 3)<br />300 X 250
+					</td>
+					<td  class='interactive_ad_unit half' >
+						<iframe scrolling="no"  frameborder="0"></iframe>
+					</td>					
+				</tr>	
+
+
+
+				
+			
+				<tr>
+					<td  class='half ' >Web Player (Unit 2)<br />400 X 350
+					</td>
+					<td   class='webplayer half'  >
+						<iframe scrolling="no"  frameborder="0"></iframe>
+					</td>
+				</tr>			
+
+							
+				<tr>
+					<td colspan='2'  class='mini-site '  >
+						<div><br />
+							Mini Site (Unit 4) -- 600 X 500
+						</div>
+						<iframe scrolling="no"  frameborder="0"></iframe>
+					</td>
+				</tr>																												
+
+
+
+				<tr> 
+					<td  class='half ' >Mobile (Unit 1)<br />320 X 480
+					</td>
+					<td  class='mobile half' >
+						<iframe scrolling="no"  frameborder="0"></iframe>
+					</td>
+				</tr>			
+
+
+
+			</table>
+	</div>
+
+</body>

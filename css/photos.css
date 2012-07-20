@@ -1,0 +1,170 @@
+	.photosContentContainer
+	{
+		margin: 0px auto;
+		z-index: 1;
+	}
+
+	.photoDescContainer
+	{
+		width: 100%;
+		background: #000000;
+		bottom: 72px;
+		z-index: 120;
+		margin: 0px auto;
+		opacity: 0.7;
+		color: #FFFFFF;
+		position: fixed;
+		overflow: hidden;
+		font-size: 10px;
+		padding: 7px;
+	}
+
+	.phtotosHeaderContainer
+	{
+		height: 26px;
+	}
+
+	.photosHeaderContentContainer
+	{	
+		width: 100%;
+		background: #000000;
+		z-index: 130;
+		margin: 0px auto;
+		opacity: 0.7;
+		color: #FFFFFF;
+		font-size: 14px;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.photosDetailsHeaderContentContainer
+	{
+		width: 100%;
+		background: #000000;
+		z-index: 130;
+		margin: 0px auto;
+		opacity: 0.7;
+		color: #FFFFFF;
+		height: 20px;
+		position: fixed;
+		font-size: 15px;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.photoHeaderLabel
+	{
+		color: #737373;
+	}
+
+	.btnPhotoShare
+	{
+		width: 47px;
+		height: 34px;
+		margin: 0px 4px 0px 0px;
+	}
+
+	.photoPageContainer
+	{
+		padding-top: 5px; 
+		border-bottom: 1px solid #000000; 
+		background: #242424;
+	}
+
+	.innerPhotoPageContainer
+	{
+		width: 100%;
+		padding-bottom: 6px;
+		/*
+		margin-left: auto; 
+		margin-right: auto;
+		*/
+	}
+
+	.photoCameraIcon
+	{
+		float: left;
+		margin-left: 12px;
+		margin-top: 1px;
+	}
+
+	/*
+	.albumLabelWrapper
+	{
+		color: #929292; 
+		margin-top: 2px; 
+		width: 157px;
+		float: left;
+		font-weight: bold;
+		font-size: 14px;
+		text-align: left;
+	}
+	*/
+
+	.albumLabelWrapper
+	{
+		float: left;
+		margin-top: 3px; 
+		min-width: 148px;
+		cursor: pointer;
+		width: 100%;
+	}
+
+	.photoLabel
+	{
+		font-size: 13px;
+		white-space: nowrap; 
+		overflow: hidden; 
+		font-weight: bold;
+		color: #A3A3A3;
+		padding-left: 57px; 
+		padding-right: 100px;
+		text-align: left;
+	}
+	
+	.photoCountWrapper
+	{
+		width: 44px; 
+		height: 20px; 
+		background: url('/mobile/images/images-photos/countContainer.png') center no-repeat;
+		margin-top: 2px;
+		float: left;
+		font-size: 11px;
+	}
+
+	.innerPhotoCountWrapper
+	{
+		margin-top: 3px; 
+		color: #FFFFFF;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.albumBtnWrapper
+	{
+		margin-top: 3px; 
+		margin-left: 5px;
+		float: left;
+		cursor: pointer;
+	}
+
+	#photosThumbnailsForm
+	{
+		display: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	.longLabelPhotos
+	{
+		display: block;
+	}
+	
+	.shortLabelPhotos
+	{
+		display: none;
+	}
+	
+	#gallery{
+		background:#353535;	
+	}

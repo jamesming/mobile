@@ -1,0 +1,22 @@
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" > PHOTOS </div>
+	<div class="addClearBoth"></div>
+</div>
+<div  id='gallery' class='scroll-pane-arrows slideUpDown insideWrapper' ></div>
+	
+<script type="text/javascript">
+	
+	
+	core.loadScript('showphotos', '/mobile/extend/showphotos.js', function(){
+		core.showphotos();
+	})								
+	core.processCallbackQueue();
+	
+</script>
+	
+

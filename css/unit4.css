@@ -1,0 +1,16 @@
+.insideWrapper{
+	width:600px;
+}
+.elementsWrapper{
+	height:293px;
+}
+.elementsInnerWrapper{
+padding:0px 40px;	
+}
+#headerWrapper{
+	width: 590px;
+	padding:5px;
+}
+.sharethisOverlay{
+top: 80px;
+}

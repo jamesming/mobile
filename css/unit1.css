@@ -1,0 +1,21 @@
+.insideWrapper{
+	width:320px;
+}
+.elementsWrapper{
+	height:320px;
+}
+.elementsInnerWrapper{
+padding:0px 40px;	
+}
+#headerWrapper{
+	border-bottom:1px solid #363636;
+}
+.headerBtnUstream{
+	margin:12px 12px -9px;
+}
+.headerBtnShare{
+	margin: 12px;
+}
+.sharethisOverlay{
+top: 82px;
+}

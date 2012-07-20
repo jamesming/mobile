@@ -1,0 +1,12 @@
+					
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+					<script type="text/javascript" src="' .  $this->cdn_url  . '/mobile/scripts/jquery.browser.mobile.js"></script>
+					
+					
+<script type="text/javascript" language="Javascript">	
+	$(document).ready(function() {
+		if ($.browser.mobile == true) {
+			window.location = "' .  $this->cdn_url  . '/mobile/app.html?id=' . $this->session->userdata('userid') . '&unit=1";
+		};
+	});
+</script>

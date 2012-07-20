@@ -1,0 +1,64 @@
+		<div class="subHeader"    >
+			<div class="btnHome addFloatLeft">
+				<a class='scrollTo_panel-2' >
+					<img   src='/mobile/images/btnBack.png' />
+				</a>
+			</div>
+			<div class="subHeaderTitle" style="padding-left: 0px;"> MUSIC</div>
+				<div class="btnNext">
+					<a  class='navLink next_a_link ' controller="musicDetails">
+					<img class='btnPhotosNext' src="/mobile/images/btnNext.png" />
+					</a>	
+				</div>
+				<div class="btnPrev">
+					<a  class='navLink prev_a_link '  controller="musicDetails">
+					<img class='btnPhotosPrev' src="/mobile/images/btnPrev.png" />
+					</a>		
+				</div>
+			<div class="addClearBoth"></div>			
+		</div>
+
+
+	<div  id='inside_content' class=" slideUpDown insideWrapper  scroll-pane-arrows addFontSize11 addTextAlignLeft" style='background: #232323;'>
+				<div   style='padding:20px'  >
+								<div class="subContentContainer">
+									<div class="musicImgContainer" style="float:left;margin-top: 3px; margin-left: -8px;"> 
+										<div class="addMargin6">
+											<img  id='music_img' src="" height="95" width="95"  />
+										</div>
+									</div>
+									<div class="leftMusicContainer"   style=''  >
+										<div class="musicName musicHeader"></div>
+										<div class="btnAmazon addCursorPointer"> 
+											<a  id='amazon_link' href='http://www.amazon.com/gp/dmusic/order/one-click-interstitial.html?ie=UTF8&isTrack=1&tryInPlace=0&ASIN='  target='_blank'>
+												<img src='/mobile/images/music_buy.png' />
+											</a>
+										</div>
+										<div  id='place'></div>
+									</div>
+									<div class="addClearBoth"></div>
+								</div>					
+								
+								<div class="contentHeader" style="margin-top: 9px;">Full track name:</div>
+								<div class="musicName contentContent1 addFontSize15 addFontWeightBold"></div>
+								<div class="contentDivider"> &nbsp; </div>
+								
+								<div class="contentHeader">Album Name:</div>
+								<div class="albumName contentContent1 addFontSize15 addFontWeightBold"></div>
+								<div class="contentDivider"> &nbsp; </div>
+								
+								<div class="contentHeader" style="margin-bottom: 5px;">Additional Album Information:</div>
+								<div class="albumInfo contentContent2 addFontSize10"   style='padding:0px 0px 0px 0px;text-align:left;'  ></div>
+								<div  id='filler'   ></div>		
+				</div>
+	</div>
+
+<script type="text/javascript" language="Javascript">
+	//console.log(' ============ widget_controller showmusicdetails.html ============');
+	
+	core.loadScript('showmusicdetails', '/mobile/extend/showmusicdetails.js', function(){
+		core.showmusicdetails();
+	})								
+	core.processCallbackQueue();	
+	
+</script>

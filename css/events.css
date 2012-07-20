@@ -1,0 +1,192 @@
+	.btnShareEvent
+	{
+		margin: 6px 8px 0px 0px;
+		height: 23px;
+		width: 110px;
+		cursor: pointer;
+		background: url("../images/btnShareEvent.gif");
+	}
+
+	.innerContentEventsContainer
+	{
+		background: #131313; 
+		color: #7C7C7C; 
+		height: 245px;
+	}
+
+	.locationContainer
+	{
+		margin-bottom: 10px;
+		width: 265px;
+	}
+
+	.leftLocationContainer
+	{
+		width: 120px; 
+		margin-left: 18px;
+	}
+
+	.locationHeader
+	{
+		color: #FFFFFF; 
+		margin-bottom: 23px;
+	}
+
+	.btnTickets
+	{
+		background: url("../images/images-events/btnTickets.gif");
+		height: 25px;
+		width: 128px;
+		margin-bottom: 3px;
+	}
+
+	.btnEvents
+	{
+		background: url("../images/images-events/btnEvents.gif");
+		height: 25px;
+		width: 128px;
+		margin-bottom: 3px;
+	}
+
+	.contentHeader
+	{
+		color: #51C4FF;
+	}
+
+	.contentContent1
+	{
+		color: #FFFFFF;
+	}
+
+	.contentContent2
+	{
+		color: #747373;
+	}
+
+	.contentDivider
+	{
+		height: 1px; 
+		background: #383838; 
+		margin: 5px 0px;
+	}
+
+	.dateHolder
+	{
+		width: 41px;
+		height: 42px;
+		background: url('/mobile/images/images-events/dateHolder.png');
+		margin-left: 10px;
+	}
+
+	.monthHolder
+	{
+		color: #FFFFFF;
+		text-shadow: 0 1px 0 #FFFFFF;
+		margin-top: 2px;
+		text-align: center;
+		font-size: 10px;
+	}
+
+	.dayHolder
+	{
+		color: #000000;
+		margin-top: 3px;
+		text-shadow: 0 0 1px #000000;
+		text-align: center;
+		font-size: 18px;
+	}
+	
+	/* new */
+	
+	.eventsItemHolder
+	{
+		background: #232323;
+		font-family: Helvetica;
+		min-height: 57px;
+		padding: 9px 9px 4px 9px;
+		box-sizing:border-box; 
+		border-bottom: 1px solid #000000;
+	}
+	
+	.eventsLabelHolder
+	{
+		margin-top: 5px; 
+		margin-bottom: 5px;
+		float: left;
+		overflow: hidden;
+		cursor: pointer;
+	}
+	
+	.longLabelEvents
+	{
+		display: block;
+	}
+
+	.shortLabelEvents
+	{
+		display: none;
+	}
+	
+	.eventsNameContainer
+	{
+		color: #A3A3A3;
+		height: 16px;
+		font-size: 13px;
+		font-weight: bold;
+		white-space: nowrap; 
+		overflow: hidden; 
+		text-align: left;
+	}
+	
+	.dateNameContainer
+	{
+		color: #7C7C7C;
+		font-weight: bold;
+		white-space: nowrap; 
+		overflow: hidden; 
+		font-size: 13px;
+		text-align: left;
+	}
+	
+	.eventsPlayHolder
+	{
+		height: 33px;
+		width: 33px;
+		margin-left: 0px;
+		float: left;
+		cursor: pointer;
+	}
+	
+	/* zoom google map image */
+	
+	.mapOverlay
+	{
+		position: fixed;
+		width: 100%;
+		top: 0px;
+		left: 0px;
+		background: #CCCCCC;
+		z-index: 999;
+		height: 100%;
+		display: none;
+		background: url('../images/overlayBG.png'); 
+	}
+
+	.mapWrapper
+	{
+		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+		background: #101010;
+		border: 1px solid #333333;
+	}
+
+	.mapInnerWrapper
+	{
+		width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}

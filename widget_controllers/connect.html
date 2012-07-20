@@ -1,0 +1,87 @@
+
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> CONNECT </div>
+	<div   style='display:none'  >
+		<div class='btnConnectWrapper'   style='padding-top:5px'  >
+			<a href='javascript: void(0);' onclick='togglePost();'>
+				<img class='connectBtn' src='/mobile/images/btnConnect.gif' />
+			</a>
+		</div>
+		<div class='addClearBoth'></div>
+	</div>
+	
+</div>
+	<div class="postContainer addClearBoth">
+		<div class="postInnerContainer">
+			<div style="height: 1px;"></div>
+			<div class="statusInput">
+				<textarea class="tweetTextArea" onkeyup="determineCharRemaining();"></textarea>
+			</div>
+			<div class="connectpostInstruction">
+			
+				<div style="margin-top: 10px;">
+					<div class="checkBoxLabel">
+						<a href='javascript: void(0);' onclick='shareTwitter();'>POST TO TWITTER</a>
+					</div>
+					<div class="addClearBoth"></div>
+				</div>
+				
+				<div style="margin-top: 4px;">
+					<div class="checkBoxLabel">
+						<a href='javascript: void(0);' onclick='shareFacebook();'>POST TO FACEBOOK</a>
+					</div>
+					<div class="addClearBoth"></div>
+				</div>
+				
+				<div style="text-align: left; margin-top: 21px; margin-left: 1px; font-size: 8px;">
+					REMAINING
+					<div id="charCount">140</div>
+				</div>
+				
+			</div>
+			<div class="addClearBoth"></div>
+		</div>
+	</div>
+
+
+<div id="innerConnectContainer" >
+		<div class="menuContainer"  >
+			<div class="menuInnerContainer">
+				<div id="menu1" class="menuItemContainer active"> 
+					<a  style="margin: 8px 0px 0px 7px;" feed='tweets'>
+						<div class="addFloatLeft" style="margin-right: 2px;"><img src="/mobile/images/images-connect/twitterIcon.png" /></div>
+						<div class="addFloatLeft">Official Feed</div>
+					</a>
+				</div>
+				<div id="menu2" class="menuItemContainer"> 
+					<a  style="margin: 8px 0px 0px 17px;" feed='mentions'>
+						<div class="addFloatLeft" style="margin-right: 2px;"><img src="/mobile/images/images-connect/twitterIcon.png" /></div>
+						<div class="addFloatLeft"  >Mentions</div>
+					</a>
+				</div>
+				<div id="menu3" class="menuItemContainer"> 
+					<a  style="margin: 8px 0px 0px 14px;" feed='facebook'>
+						<div class="addFloatLeft" style="margin-right: 2px;"><img src="/mobile/images/images-connect/facebookIcon.png" /></div>
+						<div class="addFloatLeft">Facebook</div>
+					</a>
+				</div>
+			</div>
+		</div>
+</div>
+
+<div class="feedContainer "     >
+	<div id='feed'  class='scroll-pane-arrows slideUpDown insideWrapper' style='display: block; background: #131313; overflow-y:auto;overflow-x:hidden'  >
+ 	</div>
+</div>
+<script type="text/javascript">
+	//console.log(' ============ widget_controller connect.html ============');
+	core.loadScript('showconnect', '/mobile/extend/showconnect.js', function(){
+		core.showconnect();
+	})								
+	core.processCallbackQueue();		
+</script>

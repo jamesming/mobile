@@ -1,0 +1,35 @@
+<style>
+	#theaters_details{
+		display: block;
+		color:white; 
+		background: #232323; 
+		overflow-y:auto;
+		overflow-x:hidden;
+	}
+	#theaters_details div{
+		text-align:left;
+	}	
+</style>
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-2' >
+			<img   src='/mobile/images/btnBack.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" > THEATERS </div>
+	
+</div>
+
+<div class="theaters_detailsContainer "     >
+	<div id='theaters_details' class='scroll-pane-arrows  slideUpDown insideWrapper' ></div>
+</div>
+<script type="text/javascript" language="Javascript">
+
+	core.loadScript('show_theaters_details', '/mobile/extend/show_theaters_details.js', function(){
+		core.show_theaters_details();
+	})								
+	core.processCallbackQueue();		
+	
+</script>
+
+

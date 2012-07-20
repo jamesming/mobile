@@ -1,0 +1,64 @@
+<div class="subHeader"   >
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-2' >
+			<img src='/mobile/images/btnBack.png'  />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> EVENT DETAILS </div>
+</div>
+
+<div   id='inside_content' class="insideWrapper scroll-pane-arrows addFontSize11 addTextAlignLeft slideUpDown " style='background: #232323;'>
+	
+	
+			<div   style='padding-left:10px;float:left'  >
+					<div class="musicImgContainer" style="float:left; margin-top: 3px; margin-left: 0px; margin-right: 10px;"> 
+						<div class="addMargin6">
+							<img  id='map' src='' height="95" width="95" />
+						</div>
+						
+						<div  id='buylink_div' style='margin-top: 15px;display:none'>
+							<a  id='buylink' href='' target='_blank'>
+								<img src="/mobile/images/images-events/buyTickets.png" width='107' />
+							</a>
+						</div>
+					</div>				
+			</div>
+			
+			<div  id='right_content' style='float:left;'>
+				<div class="contentHeader"  style='float:left;style="margin-top: 9px;">Event Name:</div>
+				<div  id='eventname' class="contentContent1 addFontSize15 addFontWeightBold"></div>
+				<div class="contentDivider"> &nbsp; </div>
+				
+				<div class="contentHeader">Date/Time:</div>
+				<div  id='datetime' class="contentContent1 addFontSize15 addFontWeightBold"></div>
+				<div class="contentDivider"> &nbsp; </div>
+				
+				<div class="contentHeader" style="margin-bottom: 5px;">Location:</div>
+				<div  id='location' class="contentContent1 addFontSize15 addFontWeightBold"></div>
+				<div class="contentDivider"> &nbsp; </div>
+				
+				<div class="contentHeader" style="margin-bottom: 5px;">Additional Event Information:</div>
+				<div  id='eventinfo' class="contentContent2 addFontSize10"></div>
+
+			</div>		
+
+
+</div>
+	
+<script type="text/javascript" language="Javascript">
+	
+	//console.log(' ============ widget_controller eventsDetails.html ============');
+	
+
+	
+	core.loadScript('showeventsdetails', '/mobile/extend/showeventsdetails.js', function(){
+
+		
+		core.showeventsdetails();
+
+	})								
+	
+	core.processCallbackQueue();	
+</script>							
+						
+	

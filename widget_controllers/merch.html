@@ -1,0 +1,19 @@
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> MECHANDISE </div>
+</div>
+
+<div  class='scroll-pane-arrows merchWrapper slideUpDown insideWrapper' ></div>
+
+<script type="text/javascript">
+	//console.log(' ============ widget_controller merch.html ============');
+	core.loadScript('showmerch', '/mobile/extend/showmerch.js', function(){
+		core.show_merch()
+	})								
+	core.processCallbackQueue();		
+</script>	
+

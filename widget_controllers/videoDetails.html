@@ -1,0 +1,25 @@
+	<div class="subHeader"   >
+		<div class="btnHome addFloatLeft">
+			<a class='scrollTo_panel-2' >
+				<img  src='/mobile/images/btnBack.png' />
+			</a>
+		</div>
+		<div class="subHeaderTitle" > 
+			VIDEOS
+		</div>
+		<div   style='padding-right: 4px;padding-top: 6px;float:right'   >
+				<a class='share_video' >
+						<img  src='/mobile/images/share_video.png?v=2' />
+				</a>	
+		</div>
+	</div>
+
+<div  id='video_container'   class='  insideWrapper'    style='clear:both;'  >
+	<iframe  id='iframe_video' src=""  frameborder="0" allowfullscreen  width='100%' height='100%'  ></iframe>
+</div>
+<script type="text/javascript" language="Javascript">
+	core.loadScript('showvideosdetails', '/mobile/extend/showvideosdetails.js', function(){
+		core.showvideosdetails();
+	})								
+	core.processCallbackQueue();		
+</script>

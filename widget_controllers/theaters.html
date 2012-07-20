@@ -1,0 +1,93 @@
+<style>
+	#search_zip_div{
+		float: right; 
+		font-size: 8px; 
+		font-style: italic; 
+		color: white;
+		padding:9px;
+		box-sizing:border-box;		
+	}
+	#theatersZipCode{font-size:10px;width: 30px; height: 22px; margin-right: 5px; margin-top: 2px; background: #141414; color: #FFF; font-weight: bold; border: 1px solid #141414; width: 60px; text-align: center;}																
+	#theaters{
+		display: block;
+		color:white; 
+		background: #131313;
+		text-align:left;
+	  overflow-x:hidden;
+	  overflow-y:scroll;
+	  font-size:10px;
+	}
+					#theaters .theater_names_wrapper{
+						 clear:both;
+						 padding-top:10px;
+						 padding-bottom:10px;
+						 height: 65px;
+						 border-bottom:1px solid gray;
+						 box-sizing:border-box;
+					}
+										#theaters .theater_names_wrapper .theater_ticket_images{
+											padding-left:10px;
+											width:13%;
+											float:left;
+											padding-top:10px; 
+										}
+										
+										#theaters .theater_names_wrapper .theater_names_right_wrapper{
+											width:65%;
+											float:left;
+											padding-left:20px;
+										}										
+														#theaters .theater_names_wrapper .theater_names_right_wrapper .theater_names{
+						 									clear:both;
+															color:gray;
+															font-size:15px;
+															font-weight:bold;
+															text-overflow: ellipsis;
+															white-space: nowrap;
+															overflow: hidden;
+														}
+														
+														#theaters .theater_names_wrapper .theater_names_right_wrapper .theater_address{
+						 									clear:both;
+															color:#02D0BE;
+															font-size:11px;
+															font-weight:bold;
+														}
+										#theaters .theater_names_wrapper .play_arrow{
+											width:10%;
+											float:left;
+											cursor:pointer;
+										}
+										
+										
+</style>
+<div class="subHeader">
+	<div class="btnHome addFloatLeft">
+		<a class='scrollTo_panel-1' >
+			<img  src='/mobile/images/images-photos/btnHome.png' />
+		</a>
+	</div>
+	<div class="subHeaderTitle" style="padding-left: 0px;"> THEATERS </div>
+	<img  id='go_theater_btn' src='images/goBtn.png' style='cursor:pointer;margin-top:5px;float: right;'/>
+	<div style='float: right;'>
+		
+			<input id='theatersZipCode' name="zipCode" type='text' value='' />
+		
+	</div>	
+	<div  id='search_zip_div' >
+		SEARCH BY ZIP CODE
+	</div>
+</div>
+<div class="theatersContainer "      style='clear:both'   >
+	<div  id='insertZipImage'   style='display:none'  ></div>
+	<div id='theaters'  class='scroll-pane-arrows slideUpDown insideWrapper'  ></div>
+</div>
+<div  id='storageDiv'   style='display:none'  >
+</div>
+<script type="text/javascript">
+	//console.log(' ============ widget_controller theaters.html ============');	
+	core.loadScript('show_theaters', '/mobile/extend/show_theaters.js', function(){
+		core.show_theaters();
+	})								
+	core.processCallbackQueue();
+</script>

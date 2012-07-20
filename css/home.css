@@ -1,0 +1,25 @@
+.imgContainer
+{
+	width: 317px; 
+	margin: 0px auto;
+}
+
+.bannerWrapper
+{
+	width: 320px; 
+	height: 65px;
+}
+
+#homePageContainer
+{
+	overflow: hidden;
+}
+/*
+.homeImgContainer
+{
+	margin-left: auto; 
+	margin-right: auto; 
+	min-height: 320px; 
+	width: 320px; 
+}
+*/

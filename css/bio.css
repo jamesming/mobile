@@ -1,0 +1,30 @@
+.btnFacebook
+{
+	margin: 6px 8px 0px 0px;
+	height: 23px;
+	width: 106px;
+}
+
+.bioContainer
+{
+	background: #131313; 
+	color: #7C7C7C;
+	color: #FFFFFF;	
+	text-align: left;
+	overflow-y: auto;
+}
+
+.bioHeader
+{
+	font-family: arial black; 
+	margin-bottom: 3px;
+	font-size: 16px;
+}
+
+.bioContent
+{
+	color: #7B7B7B; 
+	font-family: arial; 
+	text-shadow: 0 0 0;
+	font-size: 12px;
+}
