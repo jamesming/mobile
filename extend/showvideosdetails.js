@@ -142,7 +142,7 @@ core.showvideosdetails = function(){
 					
 					
 					
-					$('#tweet_video_link').attr('href','http://twitter.com/home?status=' +  core.youtube_video_obj[core.youtube_id_selected].title +' - http://www.youtube.com/embed/' +  core.youtube_id_selected)
+					$('#tweet_video_link').attr('href','http://twitter.com/home?status=' +  core.youtube_video_obj[core.youtube_id_selected].title +' - http://www.youtube.com/watch?v=' +  core.youtube_id_selected)
 						.click(function(event) {
 								core.googleAnalytics({
 									 'type'			:'events'
@@ -153,7 +153,7 @@ core.showvideosdetails = function(){
 						});	
 					
 					
-					$('#facebook_video_link').attr('href','https://www.facebook.com/sharer/sharer.php?u=http://www.youtube.com/embed/' +  core.youtube_id_selected)
+					$('#facebook_video_link').attr('href','https://www.facebook.com/sharer/sharer.php?u=http://www.youtube.com/watch?v=' +  core.youtube_id_selected)
 						.click(function(event) {
 								core.googleAnalytics({
 									 'type'			:'events'

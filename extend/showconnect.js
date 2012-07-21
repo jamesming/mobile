@@ -4,18 +4,20 @@ core.show_facebook_feeds= function(){
 							 'type'				:'view'
 							,'controller_to_use'		:'facebook'
 						});
-								
-	
+
+						core.googleAnalytics({
+							'type'				:'pageviews'
+							,'section'		:'facebook'
+							,'unique_desc':''
+						});			
+						
+						
 						core.loadScript('jsapi', 'https://www.google.com/jsapi', function(){
 							
 								google.load("feeds", "1", {"callback" : function(){
 									
 									
-												core.googleAnalytics({
-													'type'				:'pageviews'
-													,'section'		:'facebook'
-													,'unique_desc':''
-												});					
+			
 											
 											  var feed = new google.feeds.Feed("https://www.facebook.com/feeds/page.php?format=atom10&id="+core.facebookID);
 											  

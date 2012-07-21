@@ -1,6 +1,21 @@
 core.displayUstream=function(){
-			
+	
 						if ($('.ustreamOverlay').css('display') == 'none') { 
+							
+							
+							core.gaq({
+								'type':'view'
+								,'path':'livestream'
+							});
+		
+							if( typeof(core.trackingPixel) !== "undefined"){
+									core.trackPixel_sections({
+										 'type'				:'view'
+										,'controller_to_use'		:'livestream'
+									});
+							};								
+							
+							
 							
 							if( $('#iframe_video').is(':visible') ){
 									if( $('#iframe_video').attr('src') != '') this.youtubeVideoSrc = $('#iframe_video').attr('src');
@@ -43,12 +58,5 @@ core.close_ustream=function(){
 				$('.ustreamOverlay').html('');			
 }
 
-core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){
-							if( typeof(core.trackingPixel) !== "undefined"){
-								core.trackPixel_sections({
-									 'type'				:'view'
-									,'controller_to_use'		:'livestream'
-								});
-							};	
-})	
+
 core.processCallbackQueue();

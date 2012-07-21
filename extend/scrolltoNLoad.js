@@ -48,17 +48,25 @@
 				if( $(this).attr('merchId') != null ){
 					core.merchId_selected =  $(this).attr('merchId');
 				}				  					 								
-//				console.log(JSON.stringify(this));
-//				console.log(JSON.stringify($(this)));return;
+
 				if($(this).attr('targetIs') == 'panel-2' ){
 					
 							if( typeof(core.googleAnalytics) !== "undefined"){
+
 								core.googleAnalytics({
 									 'type'				:'pageviews'
 									,'section'		:controller_to_use
 									,'unique_desc':'list'
 								});
+								
 							};
+							
+							
+							core.gaq({
+								'type':'view'
+								,'path':controller_to_use
+							});
+							
 							
 							
 							if( typeof(core.trackingPixel) !== "undefined"){

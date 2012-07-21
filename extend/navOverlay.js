@@ -35,7 +35,7 @@
 										
 										var overlayNavItem_div = '\
 												<div class="overlayNavItem"  >\
-													<a targetIs="panel-2" class="navLink naviconlink_overlay"   onclick=core.toggleShowElements() controller="' + tab_name + '">\
+													<a targetIs="panel-2" class="navLink naviconlink_overlay"   onclick=core.toggleShowElements() controller="' + core.navIcons[i] + '">\
 														<img class="navImg" src="' + icon_image + '.png" />\
 													</a>\
 													<div class="navItemHolder " style="font-size: 11px; ; margin-top: 4px;">\
@@ -58,13 +58,7 @@
 			
 			if( !core.events['.navLink']){
 					core.events['.navLink'] = true;
-					
-					var ga_src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					core.loadScript('google_analytics_source', ga_src, function(){
-					  _gaq.push(['_setAccount', core.gid]);
-					  _gaq.push(['_trackPageview']);						
-					});	
-					core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){})	
+				
 					core.loadScript('dateformat', '/mobile/scripts/dateformat.js', function(){})
 					core.loadScript('jscrollpane', '/mobile/scripts/jquery.jscrollpane.2.0.js', function(){});
 					core.loadScript('linkify', '/mobile/scripts/jquery.linkify.js', function(){});

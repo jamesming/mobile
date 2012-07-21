@@ -1,5 +1,37 @@
+_gaq.push(['_setAccount', core.gid]);
+
+core.gaq= function( arg ){
+
+	if( typeof(arg.path) === undefined) return;
+	
+	console.log(arg);
+	
+	switch(arg.type){
+				case "event": {
+					
+					arg.label = arg.label.split(' ').join('_');
+					_gaq.push(['_trackEvent', 'rp_' + core.userId , arg.path, arg.path ]);
+					
+				};	break;
+				case "view": {
+				
+					arg.path = arg.path.split(' ').join('_');
+					arg.path.toLowerCase();
+
+					_gaq.push(['_trackPageview', '/rp/' + core.userId + '/' + arg.path ]);								
+					
+					
+				};	break;
+	}	
+	
+};
+
 
 core.googleAnalytics= function( arg ){
+	
+	
+	return;
+	
 				switch(arg.type){
 							case "events": {
 								

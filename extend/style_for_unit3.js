@@ -3,7 +3,7 @@ core.style={
 											 width 	: 300
 											,height	: 250
 											,nav_icon_size : 77
-											,home_img_size_unit : 180
+											,home_img_size_unit : 168
 											,panel_height_unit:89
 											,font_size_unit:{
 														big: 11,

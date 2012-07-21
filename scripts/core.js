@@ -228,10 +228,20 @@ var core = function(window, document){
 				}
 				return false;
 			}
+			
+			,loadGoogleAnalytics: function(){
+ 					var ga_src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					core.loadScript('google_analytics_source', ga_src, function(){});
+					core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){})	
+					core.processCallbackQueue();
+			}
+			
 			,addEvents:function(){
 				
 						 var that = this
 								,activateNav = function(){
+									
+									that.loadGoogleAnalytics();
 							
 									that.loadSpinner();
 							
@@ -288,6 +298,7 @@ var core = function(window, document){
 										that.processCallbackQueue();
 										
 										that.doWhenJqueryReady(function(){
+												that.loadGoogleAnalytics();
 												that.loadScript('ustream', '/mobile/extend/' + 'ustream.js', function(){
 													that.displayUstream();
 												});
@@ -308,6 +319,7 @@ var core = function(window, document){
 									that.processCallbackQueue();
 									
 									that.doWhenJqueryReady(function(){
+											that.loadGoogleAnalytics();
 											that.loadScript('shareoverlay', '/mobile/extend/' + 'shareoverlay.js', function(){
 												core.displayShareThis();
 											});

@@ -54,20 +54,15 @@ core.nav_slide =  {
 	
 };
 
-	
-	
 core.attachEvent('contentWrapper', document.getElementById('contentWrapper'), 'mouseover', function(){
 	if( !core.isSlideDown ){
 		core.nav_slide.down();	
 	};
 });
 
-core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){
-							if( typeof(core.trackingPixel) !== "undefined"){
-								core.trackPixel_sections({
-									 'type'				:'view'
-									,'controller_to_use'		:'home'
-								});
-							};	
-})	
-core.processCallbackQueue();
+if( typeof(core.trackingPixel) !== "undefined"){
+	core.trackPixel_sections({
+		 'type'				:'view'
+		,'controller_to_use'		:'home'
+	});
+};	

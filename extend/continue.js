@@ -75,34 +75,14 @@
 				*  CLICK NAV ICON AND LOAD LIBRARIES
 				*
 				*/
-			
-//				core.attachEvent('navMenuLink', document.querySelectorAll('.navMenuLink'), 'click', function(element){
 
 			$('.navMenuLink').click(function(event) {
 					
-					//console.log(this);
 
 					var that = this;
 					
-					core.loadScript('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',function(){
+					core.loadScript('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js',function(){});
 					
-						
-					});
-					
- 					var ga_src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					core.loadScript('google_analytics_source', ga_src, function(){
-					  _gaq.push(['_setAccount', core.gid]);
-					  _gaq.push(['_trackPageview']);						
-					});
-					
-					core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){
-							if( typeof(core.trackingPixel) !== "undefined"){
-								core.trackPixel_sections({
-									 'type'				:'view'
-									,'controller_to_use'		:'home'
-								});
-							};	
-					})	
 					core.loadScript('dateformat', '/mobile/scripts/dateformat.js', function(){})
 
 					core.processCallbackQueue();
@@ -120,11 +100,6 @@
 							core.loadScript('scrollTo', '/mobile/scripts/jquery.scrollTo-min.js', function(){});
 							
 							core.loadScript('scrolltoNLoad', '/mobile/extend/scrolltoNLoad.js', function(){
-
-
-//								console.log(that);
-//								console.log($(that));
-//								console.log('1: '+$(that).attr('targetIs'));
 
 								$(that).scrolltoNLoad();	
 								

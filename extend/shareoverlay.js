@@ -179,10 +179,21 @@
 	};
 	
 	core.displayShareThis = function(){
-			
 				this.close_ustream();
 				
-				if ($('.sharethisOverlay').css('display') == 'none') { 
+				if ($('.sharethisOverlay').css('display') == 'none') {
+					
+					core.gaq({
+					'type':'view'
+					,'path':'share'
+					});
+					
+					if( typeof(core.trackingPixel) !== "undefined"){
+						core.trackPixel_sections({
+							 'type'				:'action'
+							,'controller_to_use'		:'home'
+						});
+					};	
 					
 					if( $('#iframe_video').is(':visible') ){
 							if( $('#iframe_video').attr('src') != '') this.youtubeVideoSrc = $('#iframe_video').attr('src');
@@ -206,19 +217,11 @@
 				return;		
 		}
 		
-	core.loadScript('googleAnalytics_core', '/mobile/extend/googleAnalytics.js', function(){
-		core.url2ShareBecomes();
-		core.create_embed_code_for_sharing();
 		
-		if( typeof(core.trackingPixel) !== "undefined"){
-			core.trackPixel_sections({
-				 'type'				:'action'
-				,'controller_to_use'		:'home'
-			});
-		};				
-	})	
-	core.processCallbackQueue();
+		
+core.url2ShareBecomes();
+core.create_embed_code_for_sharing();		
+		
 
-	
 })();
 

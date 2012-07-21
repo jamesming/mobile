@@ -34,7 +34,7 @@ core.show_theaters=function() {
 				googleURL += "&output=xml";
 				googleURL += "&sensor=false";
 				$.ajax({
-					url: "http://skwerl.appspot.com/handler?url="+escape(googleURL),
+					url: "http://rp-utility.appspot.com/xml2json?url="+escape(googleURL),
 					contentType: "application/json",
 					dataType: "jsonp",
 					success: function(data) {

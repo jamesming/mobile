@@ -1,4 +1,6 @@
 core.showvideos = function(){
+	
+
 			
 			this.youtube_video_obj = {};
 		
