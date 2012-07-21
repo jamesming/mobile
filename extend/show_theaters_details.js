@@ -48,12 +48,10 @@ core.show_theaters_details=function(){
 					});
 					 	
 					$('#theater_buylink').click(function(event) {	
-							core.googleAnalytics({
-								 'type'			:'events'
-								,'category'	:'EXIT'
-								,'action'		:'CLICK'
-								,'label'		:'THEATER_BUYLINK_'  + core.temp.name
-							});	
+							core.gaq({
+							'type':'event'
+							,'path':'ExitTheatersBuy'
+							});
 					});	
 					 	
 

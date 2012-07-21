@@ -25,11 +25,10 @@ core.showphotodetail=function(){
 								
 								if( doOnce == 0){
 									doOnce = 1;
-										core.googleAnalytics({
-											 'type'				:'pageviews'
-											,'section'		:'PHOTOS_DETAILS'
-											,'unique_desc':title
-										});											
+									core.gaq({
+									'type':'view'
+									,'path':'photos/'+title
+									});									
 									
 								};
 		

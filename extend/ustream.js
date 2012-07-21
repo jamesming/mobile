@@ -1,5 +1,7 @@
 core.displayUstream=function(){
 	
+						core.closeShareThis();
+	
 						if ($('.ustreamOverlay').css('display') == 'none') { 
 							
 							
@@ -7,7 +9,8 @@ core.displayUstream=function(){
 								'type':'view'
 								,'path':'livestream'
 							});
-		
+							
+
 							if( typeof(core.trackingPixel) !== "undefined"){
 									core.trackPixel_sections({
 										 'type'				:'view'
@@ -52,11 +55,17 @@ core.close_ustream=function(){
 				if( $('#iframe_video').is(':visible') ){
 						$('#iframe_video').attr('src', this.youtubeVideoSrc);
 				};
-			
-				$('.ustreamOverlay').fadeOut(300);
-				$('#ustreamBtn').attr('src', '/mobile/images/livestream_open.gif');
-				$('.ustreamOverlay').html('');			
+				
+				if ($('.ustreamOverlay').css('display') == 'block') {
+					$('.ustreamOverlay').fadeOut(300);
+					$('#ustreamBtn').attr('src', '/mobile/images/livestream_open.gif');
+					$('.ustreamOverlay').html('');	
+					core.gaq({
+					 'type':'event'
+					,'path':'ActionLivestreamClose'
+					});								
+				};
 }
 
-
-core.processCallbackQueue();
+//core.loadScript('shareoverlay', '/mobile/extend/' + 'shareoverlay.js', function(){});
+//core.processCallbackQueue();

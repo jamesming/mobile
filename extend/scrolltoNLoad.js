@@ -47,27 +47,27 @@
 				
 				if( $(this).attr('merchId') != null ){
 					core.merchId_selected =  $(this).attr('merchId');
-				}				  					 								
+				}	
+				
+							  					 								
 
 				if($(this).attr('targetIs') == 'panel-2' ){
 					
-							if( typeof(core.googleAnalytics) !== "undefined"){
-
-								core.googleAnalytics({
-									 'type'				:'pageviews'
-									,'section'		:controller_to_use
-									,'unique_desc':'list'
-								});
-								
+					
+							var gaq_path = {
+								 'events' : 'events/list'	
+								,'merch' : 'merch/list'	
+								,'music' : 'music/list'	
+								,'photos' : 'photos/list'	
+								,'videos' : 'videos/list'	
 							};
 							
-							
-							core.gaq({
-								'type':'view'
-								,'path':controller_to_use
-							});
-							
-							
+							if( gaq_path[$(this).attr('controller')]){
+								core.gaq({
+									'type':'view'
+									,'path':gaq_path[$(this).attr('controller')]
+								});								
+							};					
 							
 							if( typeof(core.trackingPixel) !== "undefined"){
 								core.trackPixel_sections({
@@ -76,8 +76,6 @@
 								});
 							};							
 							
-					
-							// console.log('rendering:   /mobile/widget_controllers/' + $(this).attr('controller') + '.html?random=' + Math.floor(Math.random()*999999999));
 
 							core.onPanel = 2;
 					
@@ -88,9 +86,9 @@
 								if( core.unit == 2 || core.unit == 3 ){
 											if(core.isSlideDown == true){
 												$('.jspVerticalBar').css({visibility:'visible'});
-												// console.log('slide is down. jspVerticalBar is visible' );
+												
 											}else{
-												// console.log('slide is up. jspVerticalBar is hidden' );
+												
 												$('.jspVerticalBar').css({visibility:'hidden'});
 											};													
 									

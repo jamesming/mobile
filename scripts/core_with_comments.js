@@ -355,6 +355,21 @@ var core = function(window, document){
 					            element[i].addEventListener(event, callbackFunction, false);
 					        } else if (element[i].attachEvent) {
 					        	
+//											element[i].prototype.addEventListener = function(action, fn, phase) {
+//											
+//												var self = this;
+//												
+//												return this.attachEvent('on' + action, function() {
+//																																	
+//																																	return fn.apply(self, [window.event]);
+//																																
+//																															 });
+//											}
+//					        		element[i].addEventListener(event, callbackFunction, false);
+//					            element[i].attachEvent('on' + event, function(){
+//					            	callbackFunction.apply(element[i]);
+//					            });
+
 
 												element[i].attachEvent('on' + event, callbackFunction);
 
@@ -394,16 +409,25 @@ var core = function(window, document){
 	    				 ,done = false;
 	    		
 	    		script.onload = script.onreadystatechange = function(){
-
+	    			
+/*	    			if(    !done 
+	    					&& this.readyState != 'loading' 
+	    					&& (    !this.readyState
+  										|| this.readyState === 'scripts'
+  										|| this.readyState === 'complete')) {*/
+  										
   											
 	    			if( this.readyState != 'loading' ) {  											
 	    											
 	    											done = true;
-
+	    											
+	    											//console.log('loading...   name: ' + name + ' |  url: ' + url);
+	    											
 	    											if( that.callbackQueue[name]){		
 	    												that.callbackQueue[name].scripts = true;
 	    											};
-
+	    											
+	    											// Handle memory leak in IE
 	    											script.onload = script.onreadystatechange = null;
 	    											if( head && script.parentNode ){
 	    												head.removeChild( script );
@@ -416,7 +440,7 @@ var core = function(window, document){
 					
 				} 
 				else {
-
+					//console.log(' '+ name + ' already loaded.');
 					this.callbackQueue[name].scripts = true;
 					
 				}

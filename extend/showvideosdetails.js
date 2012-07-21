@@ -82,11 +82,16 @@
 				
 					$('.shareVideoOverlay').toggle();
 					
-					core.trackPixel_records({
-						 'type'				:'action'
-						,'controller_to_use'		: 'videos'
-						,'foreign_key'		: core.youtube_video_obj[core.youtube_id_selected].videoId
-					});	
+//					core.trackPixel_records({
+//						 'type'				:'action'
+//						,'controller_to_use'		: 'videos'
+//						,'foreign_key'		: core.youtube_video_obj[core.youtube_id_selected].videoId
+//					});	
+					
+					core.gaq({
+					'type':'view'
+					,'path':'videos/'+this.youtube_video_obj[youtube_id_selected].title+'/share'
+					});
 					
 			});	
 	};
@@ -133,33 +138,27 @@ core.showvideosdetails = function(){
 					
 					$('#currently_playing').text(core.youtube_video_obj[core.youtube_id_selected].title);
 					
-					
-					core.googleAnalytics({
-						 'type'				:'pageviews'
-						,'section'		:'VIDEOS_VIEWING'
-						,'unique_desc': core.youtube_video_obj[core.youtube_id_selected].title  + '_YOUTUBEID:'  + core.youtube_id_selected
+
+					var gaq_path = 'videos/' + core.youtube_video_obj[core.youtube_id_selected].title  + '_YOUTUBEID:'  + core.youtube_id_selected;
+					core.gaq({
+					 'type':'view'
+					,'path': gaq_path
 					});
-					
-					
 					
 					$('#tweet_video_link').attr('href','http://twitter.com/home?status=' +  core.youtube_video_obj[core.youtube_id_selected].title +' - http://www.youtube.com/watch?v=' +  core.youtube_id_selected)
 						.click(function(event) {
-								core.googleAnalytics({
-									 'type'			:'events'
-									,'category'	:'EXIT'
-									,'action'		:'CLICK'
-									,'label'		:'TWEET_YOUTUBE_' + core.youtube_video_obj[core.youtube_id_selected].title  + '_YOUTUBEID:'  + core.youtube_id_selected
+								core.gaq({
+								'type':'event'
+								,'path':'ExitVideosShareTwitter'
 								});
 						});	
 					
 					
 					$('#facebook_video_link').attr('href','https://www.facebook.com/sharer/sharer.php?u=http://www.youtube.com/watch?v=' +  core.youtube_id_selected)
 						.click(function(event) {
-								core.googleAnalytics({
-									 'type'			:'events'
-									,'category'	:'EXIT'
-									,'action'		:'CLICK'
-									,'label'		:'FACEBOOKSHARE_YOUTUBE_' + core.youtube_video_obj[youtube_id_selected].title  + '_YOUTUBEID:'  + core.youtube_id_selected
+								core.gaq({
+								'type':'event'
+								,'path':'ExitVideosShareFacebook'
 								});
 						});	
 

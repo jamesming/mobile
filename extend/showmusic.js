@@ -102,6 +102,13 @@ core.showmusic = function(){
 														}, 500);
 													}else{
 														
+														
+														core.gaq({
+															'type':'event'
+															,'path':'music/play'
+														});
+														
+														
 														core.playMusicFromList(musicIndex);
 													};
 												};

@@ -87,16 +87,6 @@
 	newDiv.innerHTML = content;
 	document.body.insertBefore(newDiv, document.body.firstChild);
 	
-	core.close_ustream = function(){
-			
-				if( $('#iframe_video').is(':visible') ){
-						$('#iframe_video').attr('src', this.youtubeVideoSrc);
-				};
-			
-				$('.ustreamOverlay').fadeOut(300);
-				$('#ustreamBtn').attr('src', '/mobile/images/livestream_open.gif');
-				$('.ustreamOverlay').html('');			
-	};
 
 
 	core.url2ShareBecomes=function(){
@@ -146,14 +136,11 @@
 						
 						$('#facebookShareBtn').click(function(){
 							
-								core.googleAnalytics({
-									 'type'			:'events'
-									,'category'	:'EXIT'
-									,'action'		:'CLICK'
-									,'label'		:'SHAREDIALOGUE_FACEBOOK'
+								core.gaq({
+								'type':'event'
+								,'path':'ExitShareFacebook'
 								});
-								
-							//	var link = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent('http://'+core.urlToShare);
+							
 								var link = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent('http://'+core.urlToShare+'?cache='+Math.floor(Math.random()*9999));
 
 								window.open(link);
@@ -162,13 +149,10 @@
 						
 						$('#twitterShareBtn').click(function(){
 							
-								core.googleAnalytics({
-									 'type'			:'events'
-									,'category'	:'EXIT'
-									,'action'		:'CLICK'
-									,'label'		:'SHAREDIALOGUE_TWITTER'
+								core.gaq({
+									'type':'event'
+									,'path':'ExitShareTwitter'
 								});
-								
 								
 								var link = 'http://twitter.com/intent/tweet?text=' + encodeURIComponent(core.twitter_sharetext+' http://'+core.urlToShare); 
 								
@@ -176,6 +160,11 @@
 							
 						});						
 						
+	};
+	
+	core.closeShareThis = function(){
+					$('.sharethisOverlay').fadeOut(300);
+					$('#share_button').attr('src', '/mobile/images/' + this.shareBtn.open[this.hasUstream] + '.gif');		
 	};
 	
 	core.displayShareThis = function(){
@@ -210,14 +199,14 @@
 							$('#iframe_video').attr('src', this.youtubeVideoSrc);
 					};
 					 
-					$('.sharethisOverlay').fadeOut(300);
-					$('#share_button').attr('src', '/mobile/images/' + this.shareBtn.open[this.hasUstream] + '.gif');
+					core.closeShareThis();
 
 				}
 				return;		
 		}
 		
-		
+core.loadScript('ustream', '/mobile/extend/' + 'ustream.js', function(){});
+core.processCallbackQueue();
 		
 core.url2ShareBecomes();
 core.create_embed_code_for_sharing();		

@@ -40,11 +40,10 @@ core.showeventsdetails=function(){
 											
 												doOnce = 1;			
 												
-															core.googleAnalytics({
-																'type'				:'pageviews'
-																,'section'		:'EVENT_DETAILS'
-																,'unique_desc':eventname + '_' + datetime
-															});					
+															core.gaq({
+																'type':'view'
+																,'path':'events/'+eventname + '_' + datetime
+															});				
 																											
 															if( buylink != ''){
 																$('#buylink_div').show();

@@ -38,24 +38,19 @@ core.showmusicdetails=function(){
 									
 											doOnce = 1;	
 											
-											core.googleAnalytics({
-												 'type'				:'pageviews'
-												,'section'		:'MUSIC_DETAILS'
-												,'unique_desc':songname
-											});											
+											core.gaq({
+												 'type'		:'view'
+												,'path'		:'music/'+songname+'/info'
+											});
+														
 																		
 											$('#amazon_link')
 											.click(function(event) {
 												
-			
-															
-															core.googleAnalytics({
-																 'type'			:'events'
-																,'category'	:'EXIT'
-																,'action'		:'CLICK'
-																,'label'		:'MUSIC_BUYLINK_' + songname
-															});
-			
+														core.gaq({
+															 'type'			:'event'
+															,'path'		  :'ExitMusicBuy'
+														});
 												
 											})
 											

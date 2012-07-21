@@ -273,9 +273,16 @@
 											}
 											
 											$('#audioPlayBtn').click(function(){
-											document.getElementById('audioPlayer').play();
-											$('#audioPlayBtnWrapper').css('visibility', 'hidden');
-											$('#audioPauseBtnWrapper').css('visibility', 'visible');
+												
+												core.gaq({
+													 'type'		:'event'
+													,'path'		:'ActionAudioPlayerToggle'
+												});
+												
+												document.getElementById('audioPlayer').play();
+												$('#audioPlayBtnWrapper').css('visibility', 'hidden');
+												$('#audioPauseBtnWrapper').css('visibility', 'visible');
+												
 											});
 											
 											$('#audioPauseBtn').click(function(){

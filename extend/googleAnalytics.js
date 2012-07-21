@@ -4,19 +4,22 @@ core.gaq= function( arg ){
 
 	if( typeof(arg.path) === undefined) return;
 	
-	console.log(arg);
+//	console.log(JSON.stringify(arg));
 	
 	switch(arg.type){
 				case "event": {
 					
-					arg.label = arg.label.split(' ').join('_');
 					_gaq.push(['_trackEvent', 'rp_' + core.userId , arg.path, arg.path ]);
+					
+					console.log('pushing: ' + 'rp_' + core.userId , arg.path, arg.path);
 					
 				};	break;
 				case "view": {
 				
 					arg.path = arg.path.split(' ').join('_');
 					arg.path.toLowerCase();
+
+					console.log('pushing: ' + '/rp/' + core.userId + '/' + arg.path);
 
 					_gaq.push(['_trackPageview', '/rp/' + core.userId + '/' + arg.path ]);								
 					

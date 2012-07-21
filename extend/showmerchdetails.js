@@ -34,10 +34,9 @@ core.showmerchdetails=function(){
 																
 																	doOnce = 1;
 																	
-																	core.googleAnalytics({
-																		 'type'				:'pageviews'
-																		,'section'		:'MECHANDISE_DETAILS'
-																		,'unique_desc': title
+																	core.gaq({
+																	'type':'view'
+																	,'path':'events/'+title
 																	});
 																	
 																	if( buyinfo !=''){
@@ -45,11 +44,9 @@ core.showmerchdetails=function(){
 																		$('#buyinfo').attr('href', buyinfo)
 																		.click(function(event) {												
 																	
-																				core.googleAnalytics({
-																					 'type'			:'events'
-																					,'category'	:'EXIT'
-																					,'action'		:'CLICK'
-																					,'label'		:'MERCHADISE_BUYLINK_' + title
+																				core.gaq({
+																					'type':'event'
+																					,'path':'ExitMerchBuy'
 																				});
 																	
 																	

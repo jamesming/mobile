@@ -5,11 +5,10 @@ core.show_facebook_feeds= function(){
 							,'controller_to_use'		:'facebook'
 						});
 
-						core.googleAnalytics({
-							'type'				:'pageviews'
-							,'section'		:'facebook'
-							,'unique_desc':''
-						});			
+						core.gaq({
+						'type':'view'
+						,'path':'connect/facebook/feed'
+						});	
 						
 						
 						core.loadScript('jsapi', 'https://www.google.com/jsapi', function(){
@@ -113,13 +112,12 @@ core.show_facebook_feeds= function(){
 
 };
 core.show_mentions= function(){
-			
-			core.googleAnalytics({
-				'type'				:'pageviews'
-				,'section'		:'mentions'
-				,'unique_desc':''
+	
+			core.gaq({
+			'type':'view'
+			,'path':'connect/twitter/mentions'
 			});
-			
+
 			core.trackPixel_sections({
 				 'type'				:'view'
 				,'controller_to_use'		:'mentions'
@@ -187,11 +185,11 @@ core.show_mentions= function(){
 };
 core.show_tweets= function(){
 			
-			core.googleAnalytics({
-				 'type'				:'pageviews'
-				,'section'		:'tweets'
-				,'unique_desc':''
-			});			
+			core.gaq({
+				'type':'view'
+				,'path':'connect/twitter/feed'
+			});
+			
 			
 			var  that = this
 					,tweet_segments = '';

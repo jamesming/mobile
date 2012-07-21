@@ -23,6 +23,13 @@ core.show_theaters=function() {
 		setTimeout(function(){
 			$('#theatersZipCode').val(zip);
 			$('#go_theater_btn').click();
+			
+			core.gaq({
+			'type':'view'
+			,'path':'theaters/nearme'
+			});
+			
+			
 		}, 500);
 
 	} else {
@@ -44,6 +51,14 @@ core.show_theaters=function() {
 							$('#theatersZipCode').val(zip);
 							$('#go_theater_btn').click();
 							$.cookie("rp_theaters_zip", zip, { expires: 3 });
+							
+							
+							core.gaq({
+							'type':'view'
+							,'path':'theaters/nearme'
+							});
+							
+							
 	
 						} else {
 							//alert("Got GPS, but couldn't get zip from Google.");
@@ -99,11 +114,10 @@ core.show_theaters=function() {
 		
 			google.load("feeds", "1", { "callback" : function() {
 			
-				core.googleAnalytics({
-				'type'				:'pageviews'
-				,'section'		:'THEATERS_SEARCH'
-				,'unique_desc':$('#theatersZipCode').val()
-				});				
+				core.gaq({
+				'type':'view'
+				,'path':'theaters/byzip'
+				});
 				
 				var feed = new google.feeds.Feed("http://www.fandango.com/rss/moviesnearme_"+ $('#theatersZipCode').val());
 				
